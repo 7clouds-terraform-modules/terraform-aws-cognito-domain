@@ -25,7 +25,6 @@ module "cognito_domain" {
   source                = "./"
   USER_POOL_ID          = "valid_user_pool_id"
   AMAZON_COGNITO_DOMAIN = "example-domain"
-  CERTIFICATE_ARN       = "valid_certificate_arn"
 }
 
 ```
@@ -39,7 +38,7 @@ No requirements.
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.46.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
 ## Modules
 
@@ -57,8 +56,9 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_AMAZON_COGNITO_CUSTOM_DOMAIN"></a> [AMAZON\_COGNITO\_CUSTOM\_DOMAIN](#input\_AMAZON\_COGNITO\_CUSTOM\_DOMAIN) | For Custom Domain cases. Declare AMAZON\_COGNITO\_DOMAIN as null for using it | `string` | `null` | no |
-| <a name="input_AMAZON_COGNITO_DOMAIN"></a> [AMAZON\_COGNITO\_DOMAIN](#input\_AMAZON\_COGNITO\_DOMAIN) | To use if your domain is NOT custom. It will conflict with var.AMAZON\_COGNITO\_CUSTOM\_DOMAIN | `string` | `"my-custom-domain"` | no |
+| <a name="input_AMAZON_COGNITO_DOMAIN"></a> [AMAZON\_COGNITO\_DOMAIN](#input\_AMAZON\_COGNITO\_DOMAIN) | To use if your domain is NOT custom. It will conflict with var.AMAZON\_COGNITO\_CUSTOM\_DOMAIN | `string` | n/a | yes |
 | <a name="input_CERTIFICATE_ARN"></a> [CERTIFICATE\_ARN](#input\_CERTIFICATE\_ARN) | The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain | `string` | `null` | no |
+| <a name="input_USER_POOL_ID"></a> [USER\_POOL\_ID](#input\_USER\_POOL\_ID) | User pool ID | `string` | n/a | yes |
 
 ## Outputs
 
