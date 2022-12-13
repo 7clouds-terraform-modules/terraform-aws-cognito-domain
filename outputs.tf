@@ -21,6 +21,6 @@ output "VERSION" {
 }
 
 output "CLOUDFRONT_DISTRIBUTION_ARN" {
-  description = "Cloudfront distribution arn for using as reference in 'aws_route53_record' when using custom domain" 
+  description = "Cloudfront distribution arn for using as reference in 'aws_route53_record' when using custom domain"
   value       = aws_cognito_user_pool_domain.this.cloudfront_distribution_arn == null ? null : aws_cognito_user_pool_domain.this.cloudfront_distribution_arn
 }
